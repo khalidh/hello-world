@@ -1,0 +1,4 @@
+@EndUserText.label: 'RAP Hello UUID Service Definition'
+define service ZUI_HELLO_U {
+  expose ZC_HELLO_U as HelloMessages;
+}

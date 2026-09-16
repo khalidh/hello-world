@@ -1,0 +1,8 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_HELLO_U alias Hello {
+  use create;
+  use update;
+  use delete;
+}
