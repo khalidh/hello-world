@@ -1,0 +1,25 @@
+managed implementation in class zbp_i_hello_u unique;
+strict ( 2 );
+
+define behavior for ZI_HELLO_U alias Hello
+persistent table zhello_u
+lock master
+etag master LastChangedAt
+authorization master ( instance )
+{
+  field ( numbering : managed, readonly ) Uuid;
+  field ( readonly ) CreatedBy, CreatedAt, LastChangedBy, LastChangedAt;
+
+  create;
+  update;
+  delete;
+
+  mapping for zhello_u {
+    Uuid          = uuid;
+    Message       = message;
+    CreatedBy     = created_by;
+    CreatedAt     = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}
