@@ -1,11 +1,7 @@
-@EndUserText.label: 'RAP Hello UUID Persistence'
-@AbapCatalog.enhancement.category: #NOT_EXTENSIBLE
-@AbapCatalog.tableCategory: #TRANSPARENT
-@AbapCatalog.deliveryClass: #A
-@AbapCatalog.dataMaintenance: #LIMITED
+@EndUserText.label: 'RAP Hello World Persistence Table'
 define table zhello_u {
   key client           : abap.clnt not null;
-  key uuid             : abap.raw(16) not null;
+  key uuid             : sysuuid_x16 not null;
   message              : abap.char(255);
   created_by           : abp_creation_user;
   created_at           : abp_creation_tstmpl;
