@@ -1,0 +1,19 @@
+managed implementation in class zbp_i_hello_m unique;
+strict ( 2 );
+
+define behavior for ZI_HELLO_M alias Hello
+persistent table zhello_msg
+lock master
+authorization master ( none )
+{
+  create;
+  update;
+  delete;
+
+  field ( readonly : update ) Id;
+
+  mapping for zhello_msg {
+    Id      = id;
+    Message = message;
+  }
+}

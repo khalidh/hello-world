@@ -1,0 +1,4 @@
+@EndUserText.label: 'RAP Hello World Service Definition (Managed)'
+define service ZUI_HELLO_M {
+  expose ZC_HELLO_M as HelloMessages;
+}
